@@ -51,9 +51,9 @@ class NotaFiscal {
 
   ItemNF? addItem(
       {required String produto,
-        required double valor,
-        double desconto = 0.0,
-        double acrescimo = 0.0}) {
+      required double valor,
+      double desconto = 0.0,
+      double acrescimo = 0.0}) {
     if (valor == 0.0) {
       throw Exception('Valor não pode ser 0');
     }
@@ -84,10 +84,10 @@ class ItemNF {
 
   ItemNF(
       {required this.numSeq,
-        required this.produto,
-        required this.valor,
-        this.desconto = 0.0,
-        this.acrescimo = 0.0});
+      required this.produto,
+      required this.valor,
+      this.desconto = 0.0,
+      this.acrescimo = 0.0});
 
   double getValorTotal() => valor + acrescimo - desconto;
 
