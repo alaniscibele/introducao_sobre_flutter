@@ -26,7 +26,7 @@ class NotaFiscal {
   }
 
   double? calcularValorTotalDescontos() {
-    return listaItens.map((e) => e.getValorTotal()).reduce((a, b) => a - b);
+    return listaItens.map((e) => e.desconto).reduce((a, b) => a + b);
   }
 
   ItemNF? getProdutoMaisBarato() {
